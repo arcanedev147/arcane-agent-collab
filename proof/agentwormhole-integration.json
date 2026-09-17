@@ -1,0 +1,29 @@
+{
+  "integration": {
+    "technology": "AgentWormhole x402 for EVM",
+    "package": "wormhole-x402",
+    "version": "0.8.4",
+    "import": "wormhole-x402/evm",
+    "function": "inspectAuthorization",
+    "arcaneSources": [
+      "api/agent.js",
+      "api/agent-actions.js",
+      "package.json"
+    ],
+    "behavior": [
+      "The agent gateway builds a trusted Arc Mainnet USDC quote before payment.",
+      "The payer is bound to payload.authorization.from and an optional expectedPayer.",
+      "The quote is checked for the exact scheme, Arc network, Arc USDC asset, server recipient, amount, and EIP-3009 transfer method.",
+      "inspectAuthorization verifies the EIP-3009 authorization and the gateway accepts it only when verdict.decision is allow.",
+      "Request IDs and authorization nonces are tracked to reject replay or request reuse with different payment data.",
+      "Only after verification does api/agent-actions.js settle the authorization and execute launch, buy, sell, or collect-fees."
+    ],
+    "publicReferences": {
+      "agentRegistry": "https://www.agentwormhole.com/research/arc-agent-registry",
+      "arcDocumentation": "https://www.agentwormhole.com/docs#arc",
+      "npmPackage": "https://www.npmjs.com/package/wormhole-x402",
+      "sourceRepository": "https://github.com/runningoffcode/agent-wormhole"
+    },
+    "claimBoundary": "This proof documents the wormhole-x402 integration used by Arcane. It does not claim that Arcane is registered in the AgentWormhole registry; no registry registration API or listing was verified."
+  }
+}

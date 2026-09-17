@@ -1,0 +1,37 @@
+{
+  "proofType": "arcane-mainnet-agent-lifecycle",
+  "network": "Arc Mainnet",
+  "chainId": 5042,
+  "rpc": "https://rpc.arc-scan.org",
+  "factory": "0x575E6F56c9B010dA2E5E106966bd40C5a85D7bF6",
+  "quoteAsset": {
+    "symbol": "USDC",
+    "address": "0x3600000000000000000000000000000000000000",
+    "decimals": 6
+  },
+  "agentActions": ["launch", "buy", "sell", "collect-fees"],
+  "disabledAgentActions": ["graduate", "create-pool"],
+  "creatorTaxBps": 0,
+  "liveLaunch": {
+    "token": "0xfC2F9076cF813760bf099735C77010449C6112c1",
+    "curve": "0x86787ad77FaB69B4383C355A9Baa7976C3481e0B",
+    "launchTransactionHash": "0x5cbc2cde54811f26ea42dbd3fb3450dceb5db3932f7fdbb5cb7cabed8b280d0b",
+    "buyTransactionHash": "0xac04403156d464ef19d1045ae01fb21581d4cee218c824788947afe715fad02a",
+    "sellTransactionHash": "0xe42a8be630aa869bea1aee75cddbf4674738f46fef477caccfc9c8446f5e039e",
+    "sweepTransactionHash": "0xdff9de21a075357a43ca9098e2f0056cba60d146d4b26cbb8ec6dd99b26e5900",
+    "collectFeesTransactionHash": "0xfa387304ac7a0b6a7e26e8c0353353ed2603b775d18bef36ab805ab5cc023828",
+    "finalState": {
+      "graduated": false,
+      "poolCreated": false,
+      "finalTokenBalanceRaw": "0",
+      "escrowBalanceRaw": "0",
+      "collectedUsdcRaw": "1393"
+    }
+  },
+  "privacy": {
+    "privateKeysIncluded": false,
+    "apiKeysIncluded": false,
+    "executorWalletIncluded": false,
+    "paymentRecipientIncluded": false
+  }
+}

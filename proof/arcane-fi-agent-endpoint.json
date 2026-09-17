@@ -1,0 +1,31 @@
+{
+  "endpoint": "https://arcane.fi/api/agent",
+  "checkedAt": "2026-09-17T22:23:00Z",
+  "checks": {
+    "getAgent": {
+      "status": 200,
+      "actions": ["launch", "buy", "sell", "collect-fees"],
+      "sensitiveKeysAbsent": ["executor", "factory", "rpc", "payTo"]
+    },
+    "postLaunchWithoutQuote": {
+      "status": 402,
+      "code": "AGENT_QUOTE_REQUIRED",
+      "paymentChallengeReturned": true,
+      "bearerKeyRequired": false
+    },
+    "postGraduate": {
+      "status": 404,
+      "code": "AGENT_ACTION_NOT_FOUND"
+    },
+    "healthz": {
+      "status": 200,
+      "ok": true
+    }
+  },
+  "privacy": {
+    "privateKeysIncluded": false,
+    "apiKeysIncluded": false,
+    "executorWalletIncluded": false,
+    "paymentRecipientIncluded": false
+  }
+}
